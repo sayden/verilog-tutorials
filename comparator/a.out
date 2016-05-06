@@ -1,0 +1,61 @@
+#! /usr/bin/vvp
+:ivl_version "10.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x15ec280 .scope module, "stimulus" "stimulus" 2 2;
+ .timescale -9 -12;
+v0x15fec70_0 .var "input1", 0 0;
+v0x15fed10_0 .var "input2", 0 0;
+v0x15fede0_0 .net "out", 0 0, L_0x15ff210;  1 drivers
+S_0x15ec400 .scope module, "uut" "comparator" 2 11, 3 1 0, S_0x15ec280;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "input1"
+    .port_info 1 /INPUT 1 "input2"
+    .port_info 2 /OUTPUT 1 "out"
+L_0x15feee0 .functor NOT 1, v0x15fec70_0, C4<0>, C4<0>, C4<0>;
+L_0x15fefd0 .functor NOT 1, v0x15fed10_0, C4<0>, C4<0>, C4<0>;
+L_0x15ff090 .functor AND 1, L_0x15feee0, L_0x15fefd0, C4<1>, C4<1>;
+L_0x15ff1a0 .functor AND 1, v0x15fec70_0, v0x15fed10_0, C4<1>, C4<1>;
+L_0x15ff210 .functor OR 1, L_0x15ff090, L_0x15ff1a0, C4<0>, C4<0>;
+v0x15ed1a0_0 .net *"_s0", 0 0, L_0x15feee0;  1 drivers
+v0x15fe6b0_0 .net *"_s2", 0 0, L_0x15fefd0;  1 drivers
+v0x15fe790_0 .net *"_s4", 0 0, L_0x15ff090;  1 drivers
+v0x15fe880_0 .net *"_s6", 0 0, L_0x15ff1a0;  1 drivers
+v0x15fe960_0 .net "input1", 0 0, v0x15fec70_0;  1 drivers
+v0x15fea70_0 .net "input2", 0 0, v0x15fed10_0;  1 drivers
+v0x15feb30_0 .net "out", 0 0, L_0x15ff210;  alias, 1 drivers
+    .scope S_0x15ec280;
+T_0 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x15fec70_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x15fed10_0, 0, 1;
+    %delay 20000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x15fed10_0, 0, 1;
+    %delay 20000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x15fec70_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x15fed10_0, 0, 1;
+    %delay 20000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x15fed10_0, 0, 1;
+    %delay 40000, 0;
+    %end;
+    .thread T_0;
+    .scope S_0x15ec280;
+T_1 ;
+    %vpi_call 2 30 "$monitor", "%d,%d = %d \012", v0x15fec70_0, v0x15fed10_0, v0x15fede0_0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "comparator_tb.v";
+    "comparator.v";
