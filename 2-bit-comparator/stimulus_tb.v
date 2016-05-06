@@ -17,6 +17,27 @@ module two_bit_comparator_tb;
     //Initialize inputs
     input0 = 0;
     input1 = 0;
+
+    //As a reminder
+    /*
+    00- **** = 1 <-
+    01- ***1 = 0
+    02- **10 = 0
+    03- **11 = 0
+    04- *100 = 0
+    05- *101 = 1 <-
+    06- *110 = 0
+    07- *111 = 0
+    08- 1000 = 0
+    09- 1001 = 0
+    10- 1010 = 1 <-
+    11- 1011 = 0
+    12- 1100 = 0
+    13- 1101 = 0
+    14- 1110 = 0
+    15- 1111 = 1 <-
+    */
+
     //Current state is 0000
     #20 input0 = 1; //0100
     #20 input1 = 1; //0101
@@ -31,6 +52,6 @@ module two_bit_comparator_tb;
   end
 
   initial begin
-    $monitor("TIME=%3d:     x=%2b y=%2b z=%d \n",$time,input0,input1,output0, );
+    $monitor("TIME=%3d:     x=%d y=%d z=%b \n",$time,input0,input1,output0, );
   end
 endmodule

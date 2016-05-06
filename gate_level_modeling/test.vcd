@@ -1,5 +1,5 @@
 $date
-	Fri May  6 21:52:30 2016
+	Fri May  6 22:00:33 2016
 $end
 $version
 	Icarus Verilog
@@ -7,53 +7,48 @@ $end
 $timescale
 	1s
 $end
-$scope module two_bit_comparator_tb $end
+$scope module gate_tb $end
 $var wire 1 ! output0 $end
 $var reg 2 " input0 [1:0] $end
 $var reg 2 # input1 [1:0] $end
 $scope module uut $end
-$var wire 2 $ input0 [1:0] $end
-$var wire 2 % input1 [1:0] $end
+$var wire 1 $ input0 $end
+$var wire 1 % input0_ $end
+$var wire 1 & input1 $end
+$var wire 1 ' input1_ $end
 $var wire 1 ! output0 $end
+$var wire 1 ( p $end
+$var wire 1 ) q $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-b0 %
-b0 $
+1)
+0(
+1'
+0&
+1%
+0$
 b0 #
 b0 "
 1!
 $end
-#20
+#150
 0!
+0)
+0%
+1$
 b1 "
-b1 $
-#40
+#210
 1!
+0'
+1(
+1&
 b1 #
-b1 %
-#60
+#360
 0!
-b11 #
-b11 %
-#80
-1!
-b11 "
-b11 $
-#100
-0!
-b1 #
-b1 %
-#120
-b0 #
-b0 %
-#140
-b10 "
-b10 $
-#160
-1!
-b10 #
-b10 %
-#200
+1%
+0(
+0$
+b0 "

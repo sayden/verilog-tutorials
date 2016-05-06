@@ -1,0 +1,3 @@
+#!/bin/bash
+
+iverilog gate.v gate_tb.v; ./a.out
