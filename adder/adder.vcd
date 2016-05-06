@@ -1,0 +1,78 @@
+$date
+	Fri May  6 23:41:24 2016
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module adder_gate_tb $end
+$var wire 1 ! res $end
+$var wire 1 " carryout $end
+$var reg 1 # carryin $end
+$var reg 1 $ input1 $end
+$var reg 1 % input2 $end
+$scope module uut $end
+$var wire 1 # cin $end
+$var wire 1 " cout $end
+$var wire 1 & p $end
+$var wire 1 ' r $end
+$var wire 1 ! res $end
+$var wire 1 ( s $end
+$var wire 1 $ x $end
+$var wire 1 % y $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0(
+0'
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#200
+1!
+1&
+1$
+#400
+0!
+1"
+0&
+1(
+1%
+#600
+1!
+0"
+1&
+0(
+0$
+#800
+1"
+1'
+0!
+1#
+#1000
+0"
+0'
+1!
+0&
+0%
+#1200
+1"
+1'
+0!
+1&
+1$
+#1400
+0'
+1!
+0&
+1(
+1%
+#1800

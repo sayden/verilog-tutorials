@@ -1,0 +1,2 @@
+#!/bin/bash
+iverilog -o adder adder.v adder_tb.v
