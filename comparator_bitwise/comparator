@@ -1,0 +1,63 @@
+#! /usr/bin/vvp
+:ivl_version "10.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0xe91050 .scope module, "stimulus" "stimulus" 2 2;
+ .timescale -9 -12;
+v0xec43b0_0 .var "input1", 0 0;
+v0xec4450_0 .var "input2", 0 0;
+v0xec4520_0 .net "out", 0 0, L_0xec4950;  1 drivers
+S_0xeb1280 .scope module, "uut" "comparator" 2 11, 3 1 0, S_0xe91050;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "input1"
+    .port_info 1 /INPUT 1 "input2"
+    .port_info 2 /OUTPUT 1 "out"
+L_0xec4620 .functor NOT 1, v0xec43b0_0, C4<0>, C4<0>, C4<0>;
+L_0xec4710 .functor NOT 1, v0xec4450_0, C4<0>, C4<0>, C4<0>;
+L_0xec47d0 .functor AND 1, L_0xec4620, L_0xec4710, C4<1>, C4<1>;
+L_0xec48e0 .functor AND 1, v0xec43b0_0, v0xec4450_0, C4<1>, C4<1>;
+L_0xec4950 .functor OR 1, L_0xec47d0, L_0xec48e0, C4<0>, C4<0>;
+v0xeb14a0_0 .net *"_s0", 0 0, L_0xec4620;  1 drivers
+v0xec3df0_0 .net *"_s2", 0 0, L_0xec4710;  1 drivers
+v0xec3ed0_0 .net *"_s4", 0 0, L_0xec47d0;  1 drivers
+v0xec3fc0_0 .net *"_s6", 0 0, L_0xec48e0;  1 drivers
+v0xec40a0_0 .net "input1", 0 0, v0xec43b0_0;  1 drivers
+v0xec41b0_0 .net "input2", 0 0, v0xec4450_0;  1 drivers
+v0xec4270_0 .net "out", 0 0, L_0xec4950;  alias, 1 drivers
+    .scope S_0xe91050;
+T_0 ;
+    %vpi_call 2 19 "$dumpfile", "comparator.vcd" {0 0 0};
+    %vpi_call 2 20 "$dumpvars", 32'sb00000000000000000000000000000000, S_0xe91050 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xec43b0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xec4450_0, 0, 1;
+    %delay 20000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0xec4450_0, 0, 1;
+    %delay 20000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0xec43b0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xec4450_0, 0, 1;
+    %delay 20000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0xec4450_0, 0, 1;
+    %delay 40000, 0;
+    %end;
+    .thread T_0;
+    .scope S_0xe91050;
+T_1 ;
+    %vpi_call 2 32 "$monitor", "%d,%d = %d \012", v0xec43b0_0, v0xec4450_0, v0xec4520_0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "comparator_tb.v";
+    "comparator.v";

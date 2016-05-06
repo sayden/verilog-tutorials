@@ -1,0 +1,36 @@
+$date
+	Fri May  6 22:40:21 2016
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module stimulus $end
+$var wire 1 ! out $end
+$var reg 1 " input1 $end
+$var reg 1 # input2 $end
+$scope module uut $end
+$var wire 1 " input1 $end
+$var wire 1 # input2 $end
+$var wire 1 ! out $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0#
+0"
+1!
+$end
+#20000
+0!
+1#
+#40000
+0#
+1"
+#60000
+1!
+1#
+#100000

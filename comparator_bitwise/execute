@@ -1,0 +1,2 @@
+#!/bin/bash
+iverilog -o comparator comparator.v comparator_tb.v
