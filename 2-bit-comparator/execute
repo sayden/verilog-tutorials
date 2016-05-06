@@ -1,0 +1,1 @@
+iverilog 2-bit-comparator.v stimulus_tb.v; ./a.out
