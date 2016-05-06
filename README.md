@@ -7,5 +7,6 @@
 * comparator_bitwise -> A 1 bit comparator using the bitwise operators [Link](http://www.referencedesigner.com/tutorials/verilog/verilog_12.php)
 * udp -> Using user defined primitives and tables [Link](http://www.referencedesigner.com/tutorials/verilog/verilog_11.php)
 * adder -> A 2 bit adder with carry out, carry in and result [Link](http://www.referencedesigner.com/tutorials/verilog/verilog_14.php)
+* multiplexer -> 2 to 1 and 4 to 2 multiplexer [Link](http://www.referencedesigner.com/tutorials/verilog/verilog_15.php)
 
 > Thanks for [http://www.referencedesigner.com/](http://www.referencedesigner.com/) for the tutorials
