@@ -34,7 +34,12 @@
   * *`make sint`*: To sint
   * *`make load`* Load in fpga (equivalent to `iceprog counter.bin`)
   * *`make clean`*: clean generated files
-* 4 bit register -> Maintains the state of 4 register to turn lights on and off [Link](https://github.com/Obijuan/open-fpga-verilog-tutorial/wiki/Cap%C3%ADtulo-7%3A-Contador-de-4-bits-con-prescaler)
+* 4 bit register -> Maintains the state of 4 register to turn lights on and off [Link](https://github.com/Obijuan/open-fpga-verilog-tutorial/wiki/Cap%C3%ADtulo-8%3A-registro-de-4-bits)
+  * *`make`*: default to sint
+  * *`make sint`*: To sint
+  * *`make load`* Load in fpga (equivalent to `iceprog counter.bin`)
+  * *`make clean`*: clean generated files
+* Initializer [Link](https://github.com/Obijuan/open-fpga-verilog-tutorial/wiki/Cap%C3%ADtulo-9%3A-Inicializador)
   * *`make`*: default to sint
   * *`make sint`*: To sint
   * *`make load`* Load in fpga (equivalent to `iceprog counter.bin`)
