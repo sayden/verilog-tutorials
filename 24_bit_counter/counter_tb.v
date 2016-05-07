@@ -14,10 +14,13 @@ module bit_counter_tb;
   always #1 clk = ~clk;
 
   initial begin
-    $dumpfile("dump.vcd");
-    $dumpvars;
+    $dumpfile("counter.vcd");
+    $dumpvars(0, bit_counter_tb);
 
     $monitor($time, ": %b clk:%b\n", out, clk);
+
+    # 99 $display("END of simulation");
+    # 100 $finish;
   end
 
   endmodule

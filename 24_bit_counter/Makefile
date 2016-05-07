@@ -26,13 +26,16 @@ sint: counter.bin
 counter_tb.vcd: counter.v counter_tb.v
 
 	#-- Compilar
-	iverilog -o counter_tb.out counter.v counter_tb.v
+	iverilog -o counter.out counter.v counter_tb.v
 
 	#-- Simular
-	./counter_tb.out
+	./counter.out
+
+	#-- Crear VCD
+	vvp counter.out
 
 	#-- Ver visualmente la simulacion con gtkwave
-	gtkwave counter_tb.vcd counter_tb.gtkw &
+	gtkwave counter.vcd &
 
 #------------------------------
 #-- Sintesis completa
