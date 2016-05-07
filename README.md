@@ -10,5 +10,6 @@
 * multiplexer -> 2 to 1 and 4 to 2 multiplexer [Link](http://www.referencedesigner.com/tutorials/verilog/verilog_15.php)
 * always -> Use of always block [Link](http://www.referencedesigner.com/tutorials/verilog/verilog_16.php)
 * if-statement -> Use of an if statement [Link](http://www.referencedesigner.com/tutorials/verilog/verilog_17.php)
+* case-statement -> Use of case statement together with if [Link](http://www.referencedesigner.com/tutorials/verilog/verilog_18.php)
 
 > Thanks for [http://www.referencedesigner.com/](http://www.referencedesigner.com/) for the tutorials
