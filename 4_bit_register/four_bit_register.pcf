@@ -1,0 +1,6 @@
+set_io dout[0] 96
+set_io dout[1] 97
+set_io dout[2] 98
+set_io dout[3] 99
+set_io GREEN 95
+set_io clk_in 21
