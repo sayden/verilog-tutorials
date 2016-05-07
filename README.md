@@ -19,5 +19,16 @@
   * *`make sint`*: To sint
   * *`make load`* Load in fpga (equivalent to `iceprog counter.bin`)
   * *`make clean`*: clean generated files
+* Prescaler -> Taking the 12Mhz clock of the Icestick and reduce it's speed to turn on and off a LED. [Link](https://github.com/Obijuan/open-fpga-verilog-tutorial/wiki/Chapter-5%3A-N-bit-prescaler)
+  * *`make`*: default to sint
+  * *`make sint`*: To sint
+  * *`make load`* Load in fpga (equivalent to `iceprog prescaler.bin`)
+  * *`make clean`*: clean generated files
+* Multiple Prescalers -> Using the previuos example, reuse the same module one for each led to prescale 4 different periods. [Link](https://github.com/Obijuan/open-fpga-verilog-tutorial/wiki/Cap%C3%ADtulo-6%3A-Multiples-prescalers)
+  * *`make`*: default to sint
+  * *`make sint`*: To sint
+  * *`make load`* Load in fpga (equivalent to `iceprog counter.bin`)
+  * *`make clean`*: clean generated files
+
 
 > Thank to [Obijuan](https://github.com/Obijuan) for his tutorials of Verilog and FPGA's. [Link](https://github.com/Obijuan/open-fpga-verilog-tutorial)

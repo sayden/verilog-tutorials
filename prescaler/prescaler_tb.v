@@ -1,52 +1,29 @@
-//-- prescaler_tb.v
-module prescaler_tb();
+module prescaler_tb;
+  reg clk = 0;
+  wire out;
 
-//-- Numero de bits del prescaler a comprobar
-parameter N = 2;
+  reg [1:0] count = 0;
 
-//-- Registro para generar la señal de reloj
-reg clk = 0;
+  parameter BITS = 2;
 
-//-- Salida del prescaler
-wire clk_out;
 
-//-- Registro para comprobar si el prescaler funciona
-reg [N-1:0] counter_check = 0;
+  prescaler #(.BITS(BITS))
+    Pres1(
+      .clk(clk),
+      .clk_out(out)
+    );
 
-//-- Instanciar el prescaler de N bits
-prescaler uut (
-    .clk(clk),
-    .clk_out(clk_out)
-  );
+  always #1 clk = ~clk;
 
-//-- Generador de reloj. Periodo 2 unidades
-always #1 clk = ~clk;
+  always @ ( posedge clk ) begin
+    count <= count + 1;
 
-//-- Comprobacion del valor del contador
-//-- En cada flanco de bajada se comprueba la salida del contador
-//-- y se incrementa el valor esperado
-always @(negedge clk) begin
-
-  //-- Incrementar variable del contador de prueba
-  counter_check = counter_check + 1;
-
-  //-- El bit de mayor peso debe coincidir con clk_out
-  if (counter_check[N-1] != clk_out) begin
-    $display("--->ERROR! Prescaler no funciona correctamente");
-    $display("Clk out: %d, counter_check[2]: %d",
-              clk_out, counter_check[N-1]);
+    $monitor($time, ": count=%d, clk=%b, out=%b", count, clk, out);
   end
 
-end
-
-//-- Proceso al inicio
-initial begin
-
-  //-- Fichero donde almacenar los resultados
-  $dumpfile("prescaler_tb.vcd");
-  $dumpvars(0, prescaler_tb);
-
-  # 99 $display("FIN de la simulacion");
-  # 100 $finish;
-end
+  initial begin
+    $dumpfile("prescaler.vcd");
+    $dumpvars(0, prescaler_tb);
+    #20 $finish;
+  end
 endmodule
