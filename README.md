@@ -9,5 +9,6 @@
 * adder -> A 2 bit adder with carry out, carry in and result [Link](http://www.referencedesigner.com/tutorials/verilog/verilog_14.php)
 * multiplexer -> 2 to 1 and 4 to 2 multiplexer [Link](http://www.referencedesigner.com/tutorials/verilog/verilog_15.php)
 * always -> Use of always block [Link](http://www.referencedesigner.com/tutorials/verilog/verilog_16.php)
+* if-statement -> Use of an if statement [Link](http://www.referencedesigner.com/tutorials/verilog/verilog_17.php)
 
 > Thanks for [http://www.referencedesigner.com/](http://www.referencedesigner.com/) for the tutorials
