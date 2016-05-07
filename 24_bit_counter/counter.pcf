@@ -1,0 +1,5 @@
+set_io out[23] 96
+set_io out[22] 97
+set_io out[21] 98
+set_io out[20] 99
+set_io clk 21

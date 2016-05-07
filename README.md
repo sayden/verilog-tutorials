@@ -13,3 +13,11 @@
 * case-statement -> Use of case statement together with if [Link](http://www.referencedesigner.com/tutorials/verilog/verilog_18.php)
 
 > Thanks for [http://www.referencedesigner.com/](http://www.referencedesigner.com/) for the tutorials
+
+* 24_bit_counter -> Show 4 MSB of a 24 bit counter using the internal 12Mhz FPGA clock [Link](https://github.com/Obijuan/open-fpga-verilog-tutorial/wiki/Chapter-4%3A-26-bit-counter)
+  * *`make`*: default to sint
+  * *`make sint`*: To sint
+  * *`make load`* Load in fpga (equivalent to `iceprog counter.bin`)
+  * *`make clean`*: clean generated files
+
+> Thank to [Obijuan](https://github.com/Obijuan) for his tutorials of Verilog and FPGA's. [Link](https://github.com/Obijuan/open-fpga-verilog-tutorial)
