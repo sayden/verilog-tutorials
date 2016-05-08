@@ -11,6 +11,7 @@
 * **always** -> Use of always block [Link](http://www.referencedesigner.com/tutorials/verilog/verilog_16.php)
 * **if-statement** -> Use of an if statement [Link](http://www.referencedesigner.com/tutorials/verilog/verilog_17.php)
 * **case-statement** -> Use of case statement together with if [Link](http://www.referencedesigner.com/tutorials/verilog/verilog_18.php)
+* **sequential_circuits** -> Doing flip-flops; [Link](http://www.referencedesigner.com/tutorials/verilog/verilog_31.php)
 
 > Thanks for [http://www.referencedesigner.com/](http://www.referencedesigner.com/) for the tutorials
 
