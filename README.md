@@ -28,6 +28,7 @@
 * **reg_init** A multiplexor with input and initializer [Link](https://github.com/Obijuan/open-fpga-verilog-tutorial/wiki/Cap%C3%ADtulo-13%3A-Inicializando-registros)
 * **n_bits_register** -> Registro de N bits con reset síncrono [Link](https://github.com/Obijuan/open-fpga-verilog-tutorial/wiki/Cap%C3%ADtulo-15%3A-Divisor-de-frecuencias)
 * **freq_divider** -> Frequency divider [Link](https://github.com/Obijuan/open-fpga-verilog-tutorial/wiki/Cap%C3%ADtulo-15%3A-Divisor-de-frecuencias)
+* **second_counter** -> Second counter of 4 bits (0-15) [Link](https://github.com/Obijuan/open-fpga-verilog-tutorial/wiki/Cap%C3%ADtulo-16%3A-Contador-de-segundos)
 
 
 > Thank to [Obijuan](https://github.com/Obijuan) for his tutorials of Verilog and FPGA's. [Link](https://github.com/Obijuan/open-fpga-verilog-tutorial)
