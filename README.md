@@ -12,6 +12,7 @@
 * **if-statement** -> Use of an if statement [Link](http://www.referencedesigner.com/tutorials/verilog/verilog_17.php)
 * **case-statement** -> Use of case statement together with if [Link](http://www.referencedesigner.com/tutorials/verilog/verilog_18.php)
 * **sequential_circuits** -> Doing flip-flops; [Link](http://www.referencedesigner.com/tutorials/verilog/verilog_31.php)
+* **shift_register** -> Simple shift register [Link](http://www.referencedesigner.com/tutorials/verilog/verilog_32.php)
 
 > Thanks for [http://www.referencedesigner.com/](http://www.referencedesigner.com/) for the tutorials
 
