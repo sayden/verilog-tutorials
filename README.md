@@ -25,6 +25,7 @@
 * **Initializer** [Link](https://github.com/Obijuan/open-fpga-verilog-tutorial/wiki/Cap%C3%ADtulo-9%3A-Inicializador)
 * **2_to_1_multiplexer** -> A 2 inputs selector [Link](https://github.com/Obijuan/open-fpga-verilog-tutorial/wiki/Cap%C3%ADtulo-11:-Multiplexor-de-2-a-1)
 * **M_to_1_multiplexer** -> A typical M to 1 multiplexer implemented with 4 inputs [Link](https://github.com/Obijuan/open-fpga-verilog-tutorial/wiki/Cap%C3%ADtulo-12%3A-Multiplexor-de-M-a-1)
+* **reg_init** A multiplexor with input and initializer [Link](https://github.com/Obijuan/open-fpga-verilog-tutorial/wiki/Cap%C3%ADtulo-13%3A-Inicializando-registros)
 
 
 > Thank to [Obijuan](https://github.com/Obijuan) for his tutorials of Verilog and FPGA's. [Link](https://github.com/Obijuan/open-fpga-verilog-tutorial)
