@@ -1,4 +1,5 @@
-NAME=d_ff
+NAME=regreset
+DEPS = prescaler.v register.v
 
 #-------------------------------------------------------
 #-- Objetivo por defecto: hacer simulacion y sintesis
@@ -28,7 +29,7 @@ sint: $(NAME).bin
 $(NAME)_tb.vcd: $(NAME).v $(NAME)_tb.v
 
 	#-- Compilar
-	iverilog -o $(NAME).out $(NAME).v $(NAME)_tb.v
+	iverilog -o $(NAME).out $(NAME).v $(DEPS) $(NAME)_tb.v
 
 	#-- Simular
 	./$(NAME).out
@@ -45,7 +46,7 @@ $(NAME)_tb.vcd: $(NAME).v $(NAME)_tb.v
 $(NAME).bin: $(NAME).v $(NAME).pcf
 
 	#-- Sintesis
-	/usr/local/bin/yosys -p "synth_ice40 -blif $(NAME).blif" $(NAME).v
+	/usr/local/bin/yosys -p "synth_ice40 -blif $(NAME).blif" $(NAME).v $(DEPS)
 
 	#-- Place & route
 	arachne-pnr -d 1k -p $(NAME).pcf $(NAME).blif -o $(NAME).txt
