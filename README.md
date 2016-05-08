@@ -23,6 +23,7 @@
 * **4 bit counter** -> An improved counter using the previous 22 bit prescaler [Link](https://github.com/Obijuan/open-fpga-verilog-tutorial/wiki/Cap%C3%ADtulo-7%3A-Contador-de-4-bits-con-prescaler)
 * **4 bit register** -> Maintains the state of 4 register to turn lights on and off [Link](https://github.com/Obijuan/open-fpga-verilog-tutorial/wiki/Cap%C3%ADtulo-8%3A-registro-de-4-bits)
 * **Initializer** [Link](https://github.com/Obijuan/open-fpga-verilog-tutorial/wiki/Cap%C3%ADtulo-9%3A-Inicializador)
+* **2_to_1_multiplexer** -> A 2 inputs selector [Link](https://github.com/Obijuan/open-fpga-verilog-tutorial/wiki/Cap%C3%ADtulo-11:-Multiplexor-de-2-a-1)
 
 
 > Thank to [Obijuan](https://github.com/Obijuan) for his tutorials of Verilog and FPGA's. [Link](https://github.com/Obijuan/open-fpga-verilog-tutorial)
