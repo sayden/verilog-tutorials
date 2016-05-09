@@ -6,7 +6,6 @@ module prescaler_tb;
 
   parameter BITS = 2;
 
-
   prescaler #(.BITS(BITS))
     Pres1(
       .clk(clk),
