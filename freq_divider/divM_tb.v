@@ -1,9 +1,10 @@
+`timescale 1ns / 100ps
 module divM_tb;
 
   reg clk_in = 0;
   wire clk_out;
 
-  divM  #(.BITS(24))
+  divM  #(.number(2))
     uut(.clk_in(clk_in), .clk_out(clk_out));
 
   //Clock generator

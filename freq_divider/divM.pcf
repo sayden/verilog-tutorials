@@ -1,4 +1,3 @@
-set_io clk_out 95
 set_io out[0] 99
 set_io out[1] 98
 set_io out[2] 97

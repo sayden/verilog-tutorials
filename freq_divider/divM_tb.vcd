@@ -1,0 +1,115 @@
+$date
+	Tue May 10 14:59:36 2016
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module divM_tb $end
+$var wire 1 ! clk_out $end
+$var reg 1 " clk_in $end
+$scope module uut $end
+$var wire 1 " clk_in $end
+$var wire 1 ! clk_out $end
+$var reg 1 # divcounter $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0#
+0"
+0!
+$end
+#10
+1!
+1#
+1"
+#20
+0"
+#30
+0!
+0#
+1"
+#40
+0"
+#50
+1!
+1#
+1"
+#60
+0"
+#70
+0!
+0#
+1"
+#80
+0"
+#90
+1!
+1#
+1"
+#100
+0"
+#110
+0!
+0#
+1"
+#120
+0"
+#130
+1!
+1#
+1"
+#140
+0"
+#150
+0!
+0#
+1"
+#160
+0"
+#170
+1!
+1#
+1"
+#180
+0"
+#190
+0!
+0#
+1"
+#200
+0"
+#210
+1!
+1#
+1"
+#220
+0"
+#230
+0!
+0#
+1"
+#240
+0"
+#250
+1!
+1#
+1"
+#260
+0"
+#270
+0!
+0#
+1"
+#280
+0"
+#290
+1!
+1#
+1"
+#300
+0"
