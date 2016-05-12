@@ -30,6 +30,7 @@
 * **freq_divider** -> Frequency divider [Link](https://github.com/Obijuan/open-fpga-verilog-tutorial/wiki/Cap%C3%ADtulo-15%3A-Divisor-de-frecuencias)
 * **second_counter** -> Second counter of 4 bits (0-15) [Link](https://github.com/Obijuan/open-fpga-verilog-tutorial/wiki/Cap%C3%ADtulo-16%3A-Contador-de-segundos)
 * **tone_generator** -> A tone generator [Link](https://github.com/Obijuan/open-fpga-verilog-tutorial/wiki/Cap%C3%ADtulo-17%3A-Generando-tonos-audibles)
+* **notes_seq** -> Sequences of notes [Link](https://github.com/Obijuan/open-fpga-verilog-tutorial/wiki/Cap%C3%ADtulo-19%3A-Secuenciando-notas)
 
 
 > Thank to [Obijuan](https://github.com/Obijuan) for his tutorials of Verilog and FPGA's. [Link](https://github.com/Obijuan/open-fpga-verilog-tutorial)

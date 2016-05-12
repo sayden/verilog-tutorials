@@ -1,2 +1,2 @@
 set_io clk_in 21
-set_io ch_out 44
+set_io tone 44
