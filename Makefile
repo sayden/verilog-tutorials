@@ -1,5 +1,5 @@
-NAME=regreset
-DEPS = prescaler.v register.v
+NAME=echowire
+DEPS =
 
 #-------------------------------------------------------
 #-- Objetivo por defecto: hacer simulacion y sintesis
@@ -12,7 +12,7 @@ all: sint
 #-- Objetivo para hacer la simulacion del
 #-- banco de pruebas
 #----------------------------------------------
-sim: $(NAME)_tb.vcd
+sim: clean $(NAME)_tb.vcd
 
 #-----------------------------------------------
 #-  make sint
@@ -21,7 +21,7 @@ sim: $(NAME)_tb.vcd
 #- y dejar el diseno listo para su grabacion en
 #- la FPGA
 #-----------------------------------------------
-sint: $(NAME).bin
+sint: clean $(NAME).bin
 
 #-------------------------------
 #-- Compilacion y simulacion
@@ -58,8 +58,8 @@ $(NAME).bin: $(NAME).v $(NAME).pcf
 load:
 	iceprog $(NAME).bin
 
-#-- Limpiar todo
 clean:
+	#-- Clean everything
 	rm -f *.bin *.txt *.blif *.out *.vcd *~
 
 .PHONY: all clean
