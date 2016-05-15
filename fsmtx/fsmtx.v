@@ -3,73 +3,45 @@
 
 `include "baudgen.vh"
 
-//--- Modulo que envia un caracter cuando load esta a 1
-//--- La salida tx ESTA REGISTRADA
-module fsmtx (input wire clk,       //-- Reloj del sistema (12MHz en ICEstick)
-              input wire start,     //-- Activar a 1 para transmitir
-              output reg tx         //-- Salida de datos serie (hacia el PC)
+//Send a character when load=1
+module fsmtx (input wire clk,       //-- System clock (12MHz in ICEstick)
+              input wire start,     //-- Activate 1 to transmit
+              output reg tx         //-- Serial out to PC
              );
 
-//-- Parametro: velocidad de transmision
-//-- Pruebas del caso peor: a 300 baudios
-parameter BAUD =  `B300;
+parameter BAUD =  `B300;  //baud rate
+parameter CAR = "A";      //char to send
+reg [9:0] shifter;        //Variable to store the char
 
-//-- Caracter a enviar
-parameter CAR = "A";
-
-//-- Registro de 10 bits para almacenar la trama a enviar:
-//-- 1 bit start + 8 bits datos + 1 bit stop
-reg [9:0] shifter;
-
-//-- Señal de start registrada
 reg start_r;
-
-//-- Reloj para la transmision
 wire clk_baud;
-
-//-- Reset
 reg rstn = 0;
+reg [3:0] bitCounter;
 
-//-- Bitcounter
-reg [3:0] bitc;
+//--------- Microorders
+wire load;    //-- Load shifter. bit counter = 0
+wire baud_en; //-- Turn on baud gen
 
-//--------- Microordenes
-wire load;    //-- Carga del registro de desplazamiento. Puesta a 0 del
-              //-- contador de bits
-wire baud_en; //-- Habilitar el generador de baudios para la transmision
-
-//-------------------------------------
-//-- RUTA DE DATOS
-//-------------------------------------
-
-//-- Registrar la entrada start
-//-- (para cumplir con las reglas de diseño sincrono)
+//-- DATA ROUTE
 always @(posedge clk)
   start_r <= start;
 
-//-- Registro de desplazamiento, con carga paralela
-//-- Cuando load_r es 0, se carga la trama
-//-- Cuando load_r es 1 y el reloj de baudios esta a 1 se desplaza hacia
-//-- la derecha, enviando el siguiente bit
-//-- Se introducen '1's por la izquierda
+// Shift reg, parallel load
+// When load_r is 0, "char" is loaded
+// When load_r is 1 and baud clock is 1, shift to right and add a '1' through left
 always @(posedge clk)
-  //-- Reset
-  if (rstn == 0)
+  if (rstn == 0)                        //-- Reset
     shifter <= 10'b11_1111_1111;
-
-  //-- Modo carga
-  else if (load == 1)
+  else if (load == 1)                   //-- Load
     shifter <= {CAR,2'b01};
-
-  //-- Modo desplazamiento
-  else if (load == 0 && clk_baud == 1)
+  else if (load == 0 && clk_baud == 1)  //Shift
     shifter <= {1'b1, shifter[9:1]};
 
 always @(posedge clk)
   if (load == 1)
-    bitc <= 0;
+    bitCounter <= 0;
   else if (load == 0 && clk_baud == 1)
-    bitc <= bitc + 1;
+    bitCounter <= bitCounter + 1;
 
 //-- Sacar por tx el bit menos significativo del registros de desplazamiento
 //-- Cuando estamos en modo carga (load_r == 0), se saca siempre un 1 para
@@ -98,20 +70,13 @@ localparam IDLE = 0;
 localparam START = 1;
 localparam TRANS = 2;
 
-//-- Estados del autómata del controlador
-reg [1:0] state;
 
-//-- Transiciones entre los estados
-always @(posedge clk)
-
-  //-- Reset del automata. Al estado inicial
-  if (rstn == 0)
+reg [1:0] state;        //-- Estados del autómata del controlador
+always @(posedge clk)   //-- Transiciones entre los estados
+  if (rstn == 0)        //-- Reset del automata. Al estado inicial
     state <= IDLE;
-
   else
-    //-- Transiciones a los siguientes estados
-    case (state)
-
+    case (state)        //-- Transiciones a los siguientes estados
       //-- Estado de reposo. Se sale cuando la señal
       //-- de start se pone a 1
       IDLE:
@@ -128,7 +93,7 @@ always @(posedge clk)
       //-- Transmitiendo. Se esta en este estado hasta
       //-- que se hayan transmitido todos los bits pendientes
       TRANS:
-        if (bitc == 11)
+        if (bitCounter == 11)
           state <= IDLE;
         else
           state <= TRANS;
