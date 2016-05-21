@@ -1,10 +1,10 @@
-NAME=echowire
-DEPS =
+NAME=txtest3
+DEPS=baudgen.v divider.v
 
 #-------------------------------------------------------
 #-- Objetivo por defecto: hacer simulacion y sintesis
 #-------------------------------------------------------
-all: sint
+all: clean sint load
 
 #----------------------------------------------
 #-- make sim
