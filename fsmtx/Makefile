@@ -4,7 +4,7 @@ DEPS=baudgen.v
 #-------------------------------------------------------
 #-- Objetivo por defecto: hacer simulacion y sintesis
 #-------------------------------------------------------
-all: sint
+all: clean sint load
 
 #----------------------------------------------
 #-- make sim
