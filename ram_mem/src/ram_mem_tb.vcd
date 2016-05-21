@@ -1,0 +1,132 @@
+$date
+	Fri May 20 22:34:43 2016
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module ram_mem_tb $end
+$var wire 4 ! out [3:0] $end
+$var reg 4 " address [3:0] $end
+$var reg 1 # clk $end
+$var reg 4 $ data [3:0] $end
+$var reg 1 % mode $end
+$scope module uut $end
+$var wire 4 & address [3:0] $end
+$var wire 1 # clk $end
+$var wire 4 ' data [3:0] $end
+$var wire 1 % mode $end
+$var reg 4 ( out [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx (
+bx '
+b0 &
+x%
+bx $
+0#
+b0 "
+bx !
+$end
+#1
+b0 !
+b0 (
+b0 $
+b0 '
+0%
+1#
+#2
+b1 "
+b1 &
+0#
+#3
+b10 !
+b10 (
+b10 "
+b10 &
+1#
+#4
+b101 "
+b101 &
+0#
+#5
+b1010 !
+b1010 (
+b1010 "
+b1010 &
+1#
+#6
+b1100 "
+b1100 &
+0#
+#7
+b1111 !
+b1111 (
+b1111 "
+b1111 &
+1#
+#8
+0#
+#9
+b0 !
+b0 (
+1#
+b0 "
+b0 &
+b1001 $
+b1001 '
+1%
+#10
+0#
+#11
+b1001 !
+b1001 (
+1#
+b0 $
+b0 '
+0%
+#12
+0#
+#13
+b0 !
+b0 (
+1#
+b1011 $
+b1011 '
+1%
+#14
+0#
+#15
+b1011 !
+b1011 (
+1#
+b0 $
+b0 '
+0%
+#16
+0#
+#17
+1#
+#18
+0#
+#19
+b0 !
+b0 (
+1#
+b1101 $
+b1101 '
+1%
+#20
+0#
+#21
+b1101 !
+b1101 (
+1#
+b0 $
+b0 '
+0%
